@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html><html><head><title>Sign up</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="card"><h2>Sign Up</h2>
+<body><div class="card"><h2>Create Your Account</h2>
 <form method="POST">
   <input name="full_name" placeholder="Full name" required>
   <input name="username" placeholder="Username" required>
