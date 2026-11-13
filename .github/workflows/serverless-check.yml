@@ -1,0 +1,20 @@
+name: Serverless PHP Check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+      - name: Where is this running?
+        run: |
+          echo "Runner hostname: $(hostname)"
+          uname -a
+          whoami
+      - name: PHP version on the runner
+        run: php -v
+      - name: Check every PHP file for syntax errors
+        run: |
+          for f in *.php; do php -l "$f"; done
+      - name: Finished
+        run: echo "Job done. This temporary server is destroyed after this job."
